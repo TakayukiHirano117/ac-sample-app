@@ -14,12 +14,13 @@ export const GET = async () => {
 export const POST = async (req: NextRequest) => {
   const body = await req.json();
   const { title } = body;
-  const { data, error } = await supabase.from("todos").insert({ title: title });
+  // const { data, error } = await supabase.from("todos").insert({ title: title });
+  await supabase.from("todos").insert({ title: title });
 
-  if (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
-  }
+  // if (error) {
+  //   return NextResponse.json({ error: error.message }, { status: 500 });
+  // }
 
-  return NextResponse.json(data, { status: 201 });
+  // return NextResponse.json(data, { status: 201 });
 };
 
