@@ -1,7 +1,5 @@
 import React from 'react'
 
-// props受け取ってそれでmapで表示
-
 interface Todos {
     id: string
     title: string
@@ -25,7 +23,7 @@ const Todoitem = ({ todos }: { todos: Todos[] }) => {
                         <div className='flex bg-stone-100 p-2 text-xl items-center justify-between'>
                             <li className='font-medium mr-2'>✅ {todo.title}</li>
                             <form>
-                                <button type='submit' onClick={() => handleTodoDelete(todo.id)} className='cursor-pointer text-4xl font-bold hover:text-slate-500 duration-300'>×</button>
+                                <button type='button' onClick={() => handleTodoDelete(todo.id)} className='cursor-pointer text-4xl font-bold hover:text-slate-500 duration-300'>×</button>
                             </form>
                         </div>
                     </ul>
