@@ -19,7 +19,7 @@ const Todoitem = ({ todos }: { todos: Todos[] }) => {
             {
                 todos.map((todo) => (
                     <ul key={todo.id} className='flex flex-col gap-2 mt-2 justify-between mx-auto'>
-                        <div className='flex bg-stone-100 p-2 text-xl items-center'>
+                        <div className='flex bg-stone-100 p-2 text-xl items-center justify-between'>
                             <li className='font-medium mr-2'>✅ {todo.title}</li>
                             <form>
                                 <button type='submit' onClick={() => handleTodoDelete(todo.id)} className='cursor-pointer text-4xl font-bold hover:text-slate-500 duration-300'>×</button>
