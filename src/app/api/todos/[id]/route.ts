@@ -1,4 +1,4 @@
-import { NextRequest } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { supabase } from "../../../../../utils/supabase";
 
 
@@ -10,10 +10,10 @@ export const DELETE = async (
   const { error } = await supabase.from("todos").delete().eq("id", id);
 
   if (error) {
-    return Response.json({ error: error.message }, { status: 500 });
+    return NextResponse.json({ error: error.message }, { status: 500 });
   }
 
-  return Response.json(
+  return NextResponse.json(
     { message: "Todo deleted successfully" },
     { status: 200 }
   );
