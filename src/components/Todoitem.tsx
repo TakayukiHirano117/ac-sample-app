@@ -7,8 +7,10 @@ interface Todos {
     title: string
 }
 
+const API_URL = "https://ac-sample-app.vercel.app/"
+
 const handleTodoDelete = async (id: string) => {
-    await fetch(`http://localhost:3000/api/todos/${id}`, {
+    await fetch(`${API_URL}api/todos/${id}`, {
         method: 'DELETE'
     });
 }
