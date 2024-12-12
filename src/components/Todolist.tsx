@@ -9,8 +9,8 @@ export interface Todos {
 }
 
 const Todolist = () => {
-    // const API_URL = process.env.NEXT_PUBLIC_PRODUCTION_URL
-    const API_URL = process.env.NEXT_PUBLIC_DEVELOPMENT_URL
+    const API_URL = process.env.NEXT_PUBLIC_PRODUCTION_URL
+    // const API_URL = process.env.NEXT_PUBLIC_DEVELOPMENT_URL
     const [title, setTitle] = useState<string>('')
     const [todos, setTodos] = useState([]);
 

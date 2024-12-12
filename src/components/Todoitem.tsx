@@ -5,8 +5,8 @@ interface Todos {
     title: string
 }
 
-// const API_URL = process.env.NEXT_PUBLIC_PRODUCTION_URL
-const API_URL = process.env.NEXT_PUBLIC_DEVELOPMENT_URL
+const API_URL = process.env.NEXT_PUBLIC_PRODUCTION_URL
+// const API_URL = process.env.NEXT_PUBLIC_DEVELOPMENT_URL
 
 
 const handleTodoDelete = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, id: string) => {
