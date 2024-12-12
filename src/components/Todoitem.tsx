@@ -3,11 +3,11 @@ import React from 'react'
 // props受け取ってそれでmapで表示
 
 interface Todos {
-    id: number
+    id: string
     title: string
 }
 
-const handleTodoDelete = async (id: number) => {
+const handleTodoDelete = async (id: string) => {
     await fetch(`http://localhost:3000/api/todos/${id}`, {
         method: 'DELETE'
     });
