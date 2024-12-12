@@ -9,7 +9,7 @@ export interface Todos {
 }
 
 const Todolist = () => {
-    const API_URL = "https://ac-sample-app.vercel.app/"
+    const API_URL = process.env.NEXT_PUBLIC_PRODUCTION_URL
     const [title, setTitle] = useState<string>('')
     const [todos, setTodos] = useState([]);
 
@@ -18,7 +18,7 @@ const Todolist = () => {
     }
 
     const handleTitleSubmit = async () => {
-        await fetch(`${API_URL}api/todos`, {
+        await fetch(`${API_URL}/api/todos`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -30,7 +30,7 @@ const Todolist = () => {
     }
 
     const getTodos = async () => {
-        const res = await fetch('`${API_URL}api/todos`')
+        const res = await fetch(`${API_URL}/api/todos`)
         const todos = await res.json();
         return todos
     }
