@@ -4,7 +4,7 @@ import { supabase } from "../../../../../utils/supabase";
 
 export const DELETE = async (
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) => {
   const id = parseInt((await params).id);
   const { error } = await supabase.from("todos").delete().eq("id", id);
