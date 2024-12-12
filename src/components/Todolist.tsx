@@ -8,11 +8,8 @@ export interface Todos {
     title: string
 }
 
-
-
-
-
 const Todolist = () => {
+    const API_URL = "https://ac-sample-app.vercel.app/"
     const [title, setTitle] = useState<string>('')
     const [todos, setTodos] = useState([]);
 
@@ -21,7 +18,7 @@ const Todolist = () => {
     }
 
     const handleTitleSubmit = async () => {
-        await fetch('http://localhost:3000/api/todos', {
+        await fetch(`${API_URL}api/todos`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -33,7 +30,7 @@ const Todolist = () => {
     }
 
     const getTodos = async () => {
-        const res = await fetch('http://localhost:3000/api/todos')
+        const res = await fetch('`${API_URL}api/todos`')
         const todos = await res.json();
         return todos
     }
