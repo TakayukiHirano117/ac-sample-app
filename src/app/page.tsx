@@ -1,5 +1,6 @@
-import Todolist from "@/components/Todolist";
+'use client'
 
+import Todolist from "@/components/Todolist";
 export default function Home() {
   return (
     <div>
