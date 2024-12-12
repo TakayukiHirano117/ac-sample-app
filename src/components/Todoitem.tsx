@@ -11,7 +11,7 @@ const API_URL = process.env.NEXT_PUBLIC_PRODUCTION_URL
 
 
 const handleTodoDelete = async (id: string) => {
-    await fetch(`${API_URL}api/todos/${id}`, {
+    await fetch(`${API_URL}/api/todos/${id}`, {
         method: 'DELETE'
     });
 }
