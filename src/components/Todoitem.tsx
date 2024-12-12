@@ -7,7 +7,8 @@ interface Todos {
     title: string
 }
 
-const API_URL = "https://ac-sample-app.vercel.app/"
+const API_URL = process.env.NEXT_PUBLIC_PRODUCTION_URL
+
 
 const handleTodoDelete = async (id: string) => {
     await fetch(`${API_URL}api/todos/${id}`, {
